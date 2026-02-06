@@ -1,0 +1,31 @@
+
+Computed epsilons:
+float       eps = 1.19209e-07
+double      eps = 2.22045e-16
+long double eps = 2.22045e-16
+
+System epsilons (<limits>):
+float       eps = 1.19209e-07
+double      eps = 2.22045e-16
+long double eps = 2.22045e-16
+
+As powers of two:
+float       = 2^-23
+double      = 2^-52
+long double = 2^-52
+
+Non-commutativity of addition:
+a==b ? false
+a>1  ? false
+b>1  ? true
+       tiny=0.00000000000000011
+1+tiny+tiny=1.00000000000000000
+tiny+tiny+1=1.00000000000000022
+
+Comparing doubles:
+d1 = 0.79999999999999993
+d2 = 0.80000000000000004
+d1==d2 ? false
+
+Approximate comparison:
+approx(d1,d2) ? true
