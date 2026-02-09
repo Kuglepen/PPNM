@@ -1,4 +1,9 @@
-.DS_Store
+# VS Code settings
+.vscode/
+
+# Compiled binaries & objects
 *.o
 main
 
+# Output files
+*.txt
