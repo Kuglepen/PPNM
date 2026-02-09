@@ -7,3 +7,6 @@ main
 
 # Output files
 *.txt
+
+# MacOS system files
+.DS_Store
