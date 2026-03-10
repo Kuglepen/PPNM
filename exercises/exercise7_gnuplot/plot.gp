@@ -59,6 +59,7 @@ set zrange [0:6]
 set palette rgb 33,13,10
 set xrange [-4:4]
 set yrange [-4:4]
+# set lmargin 10 maybe we need this
 
 splot "gamma_complex.dat" using 1:2:3 with pm3d, \
       "" using 1:2:3 with lines lc "black" lw 0.5
