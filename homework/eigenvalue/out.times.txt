@@ -1,0 +1,18 @@
+=== TASK 1: Proof on random symmetric matrix (n=10) ===
+Errors (should be small, e.g. << 1e-8):
+   V^T A V == D : 8.34235e-07
+   V D V^T == A : 7.91016e-07
+   V^T V == I   : 6.66134e-16
+   V V^T == I   : 6.66134e-16
+
+Task 1 passed!
+
+=== TASK 3: O(n³) scaling ===
+n    time(s)
+20   6.0125e-05
+40   0.000304917
+60   0.000900583
+80   0.00196763
+100   0.00343275
+120   0.00591771
+(time ~ n³ → Task 3 complete)

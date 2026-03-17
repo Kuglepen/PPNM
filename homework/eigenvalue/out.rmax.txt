@@ -1,0 +1,45 @@
+=== TASK 2: Hydrogen s-wave (rmax=5, dr=0.1, n=49) ===
+   ε1 = -0.495135
+   ε2 = 0.141229
+   ε3 = 1.04979
+RESULT dr=0.1 rmax=5 E0=-0.495135 E1=0.141229 E2=1.04979
+Ground state error = 0.00486486
+
+Wavefunctions saved to waves.dat (columns: r f0, f1, f2)
+Run with different -dr / -rmax for convergence plots.
+=== TASK 2: Hydrogen s-wave (rmax=10, dr=0.1, n=99) ===
+   ε1 = -0.498755
+   ε2 = -0.112703
+   ε3 = 0.0913943
+RESULT dr=0.1 rmax=10 E0=-0.498755 E1=-0.112703 E2=0.0913943
+Ground state error = 0.00124455
+
+Wavefunctions saved to waves.dat (columns: r f0, f1, f2)
+Run with different -dr / -rmax for convergence plots.
+=== TASK 2: Hydrogen s-wave (rmax=15, dr=0.1, n=149) ===
+   ε1 = -0.498756
+   ε2 = -0.124419
+   ε3 = -0.0268437
+RESULT dr=0.1 rmax=15 E0=-0.498756 E1=-0.124419 E2=-0.0268437
+Ground state error = 0.00124379
+
+Wavefunctions saved to waves.dat (columns: r f0, f1, f2)
+Run with different -dr / -rmax for convergence plots.
+=== TASK 2: Hydrogen s-wave (rmax=20, dr=0.1, n=199) ===
+   ε1 = -0.498756
+   ε2 = -0.124909
+   ε3 = -0.0498961
+RESULT dr=0.1 rmax=20 E0=-0.498756 E1=-0.124909 E2=-0.0498961
+Ground state error = 0.00124379
+
+Wavefunctions saved to waves.dat (columns: r f0, f1, f2)
+Run with different -dr / -rmax for convergence plots.
+=== TASK 2: Hydrogen s-wave (rmax=30, dr=0.1, n=299) ===
+   ε1 = -0.498756
+   ε2 = -0.124922
+   ε3 = -0.0554079
+RESULT dr=0.1 rmax=30 E0=-0.498756 E1=-0.124922 E2=-0.0554079
+Ground state error = 0.00124379
+
+Wavefunctions saved to waves.dat (columns: r f0, f1, f2)
+Run with different -dr / -rmax for convergence plots.
