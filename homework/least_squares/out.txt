@@ -1,0 +1,11 @@
+Polynomial coefficients:
+1 2.78044e-15 1 
+
+Radioactive decay fit:
+a = 142.404
+lambda = 0.170624 ± 0.00715662
+Covariance matrix Sigma:
+0.0012533 -0.000197055 
+-0.000197055 5.12172e-05 
+T1/2 = 4.06242 ± 0.170394 days
+Theory value: 3.6316(14) days
