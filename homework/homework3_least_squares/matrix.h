@@ -58,9 +58,7 @@ struct matrix {
 	matrix& operator=(const matrix& other)=default;
 	matrix& operator=(matrix&& other)=default;
 	inline double& operator()(int i, int j){return cols[j][i];}
-	inline double& operator[](int i, int j){return cols[j][i];}
 	inline const double& operator()(int i, int j)const{return cols[j][i];}
-	inline const double& operator[](int i, int j)const{return cols[j][i];}
 	inline vector& operator[](int i){return cols[i];}
 	inline const vector& operator[](int i) const {return cols[i];}
 //	void resize(int n, int m);
