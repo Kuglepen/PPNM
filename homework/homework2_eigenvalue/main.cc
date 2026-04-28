@@ -11,9 +11,9 @@
 #include <cmath>
 
 int main(int argc, char** argv) {
-    // ====================== TASK 1 + 3 (no arguments) ======================
+    // TASK 1 + 3 (no arguments)
     if (argc == 1) {
-        std::cout << "=== TASK 1: Proof on random symmetric matrix (n=10) ===\n";
+        std::cout << "TASK 1: Proof on random symmetric matrix (n=10)\n";
         std::mt19937 rng(42);
         std::uniform_real_distribution<double> dist(-1.0, 1.0);
 
@@ -30,7 +30,6 @@ int main(int argc, char** argv) {
 
         auto [w, V] = pp::jacobi(A);
 
-        // Build checks using the exact operators from matrix.h
         pp::matrix D = diag(w);
         pp::matrix Vt = transpose(V);
 
@@ -68,11 +67,10 @@ int main(int argc, char** argv) {
                   << "   V D V^T == A : " << err_A << "\n"
                   << "   V^T V == I   : " << err_ortho1 << "\n"
                   << "   V V^T == I   : " << err_ortho2 << "\n\n";
-        std::cout << "Task 1 passed!\n\n";
 
-        // TASK 3: O(n³) scaling
-        std::cout << "=== TASK 3: O(n³) scaling ===\n";
-        std::cout << "n    time(s)\n";
+        // TASK 3: O(n**3) scaling
+        std::cout << "TASK 3: O(n³) scaling\n";
+        std::cout << "n time(s)\n";
         for(int nn = 20; nn <= 120; nn += 20) {
             pp::matrix AA(nn, nn);
             for(int i = 0; i < nn; ++i) {
@@ -88,11 +86,11 @@ int main(int argc, char** argv) {
             double t = std::chrono::duration<double>(end-start).count();
             std::cout << nn << "   " << t << "\n";
         }
-        std::cout << "(time ~ n³ → Task 3 complete)\n";
+        std::cout << "(time ~ n**3)\n";
         return 0;
     }
 
-    // ====================== TASK 2: Hydrogen (with -rmax / -dr) ======================
+    //  TASK 2: Hydrogen (with -rmax / -dr) 
     double rmax = 10.0, dr = 0.3;
     for(int i = 1; i < argc; i += 2) {
         std::string arg(argv[i]);
@@ -128,15 +126,15 @@ int main(int argc, char** argv) {
     std::iota(idx.begin(), idx.end(), 0);
     std::sort(idx.begin(), idx.end(), [&](int a, int b){ return w_unsorted[a] < w_unsorted[b]; });
 
-    std::cout << "=== TASK 2: Hydrogen s-wave (rmax=" << rmax << ", dr=" << dr
-              << ", n=" << npoints << ") ===\n";
+    std::cout << "TASK 2: Hydrogen s-wave (rmax=" << rmax << ", dr=" << dr
+              << ", n=" << npoints << ")\n";
 
     int want = std::min(3, npoints); // number of eigenvalues/wavefunctions we can output
     for(int k = 0; k < want; ++k) {
         std::cout << "   ε" << k+1 << " = " << w_unsorted[idx[k]] << "\n";
     }
 
-    // Machine-readable results for plotting/convergence scripts
+    // Machine readable results for plotting/convergence scripts
     double E0 = (npoints >= 1) ? w_unsorted[idx[0]] : 0.0;
     double E1 = (npoints >= 2) ? w_unsorted[idx[1]] : 0.0;
     double E2 = (npoints >= 3) ? w_unsorted[idx[2]] : 0.0;

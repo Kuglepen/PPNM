@@ -4,7 +4,7 @@
 
 namespace pp {
 
-// -------- VECTOR --------
+// VECTOR
 struct vector {
     std::vector<double> data;
 
@@ -23,7 +23,7 @@ struct vector {
     }
 };
 
-// -------- MATRIX --------
+// MATRIX
 struct matrix {
     int n,m;
     std::vector<double> data;
@@ -49,7 +49,7 @@ struct matrix {
     }
 };
 
-// -------- DECLARATIONS --------
+// DECLARATIONS
 matrix transpose(const matrix& A);
 matrix operator*(const matrix& A, const matrix& B);
 matrix diag(const vector& v);

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-// -------- random ----------
+// random
 double rand_double(){
     static random_device rd;
     static mt19937 gen(rd());
@@ -32,7 +32,7 @@ pp::vector random_vector(int n){
     return v;
 }
 
-// -------- main ----------
+// main
 int main(){
 
     int n = 5;
@@ -61,11 +61,11 @@ int main(){
 
     cout<<"n = "<<n<<"\n";
 
-    // 1. QR TEST
+    // QR TEST
     pp::matrix A = random_matrix(n,n);
     pp::qr decomp(A);
 
-    cout<<"\n--- Checking Q^T Q = I ---\n";
+    cout<<"\n Checking Q^T Q = I \n";
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             double sum=0;
@@ -78,7 +78,7 @@ int main(){
         cout<<"\n";
     }
 
-    cout<<"\n--- Checking QR - A ---\n";
+    cout<<"\n Checking QR - A \n";
     pp::matrix QR = decomp.Q * decomp.R;
 
     for(int i=0;i<n;i++){
@@ -87,8 +87,8 @@ int main(){
         cout<<"\n";
     }
 
-    // 2. SOLVE TEST
-    cout<<"\n--- Solve test ---\n";
+    // SOLVE TEST
+    cout<<"\n Solve test \n";
 
     pp::vector b = random_vector(n);
     pp::vector x = decomp.solve(b);
@@ -99,12 +99,12 @@ int main(){
         cout<<Ax[i]-b[i]<<" ";
     cout<<"\n";
 
-    // 3. DETERMINANT
-    cout<<"\n--- Determinant ---\n";
+    // DETERMINANT
+    cout<<"\n Determinant\n";
     cout<<"det(A) = "<<decomp.det()<<"\n";
 
-    // 4. INVERSE TEST
-    cout<<"\n--- Inverse test ---\n";
+    // INVERSE TEST
+    cout<<"\n Inverse test \n";
 
     pp::matrix B = decomp.inverse();
     pp::matrix AB = A*B;

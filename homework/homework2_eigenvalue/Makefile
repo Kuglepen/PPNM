@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++23 -O2 -Wall -Wextra
 
-# ================= BUILD =================
+# BUILD
 all: main
 
 main: main.o jacobi.o matrix.o
@@ -16,15 +16,15 @@ jacobi.o: jacobi.cc matrix.h jacobi.h
 matrix.o: matrix.cc matrix.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# ================= CLEAN =================
+# CLEAN
 clean:
 	rm -f *.o main waves.dat *.txt *.png
 
-# ================= TASK 1 + 3 =================
+# TASK 1 + 3
 test:
 	./main
 
-# ================= CONVERGENCE IN dr =================
+# CONVERGENCE IN dr
 convergence_dr:
 	@echo "Running convergence in dr..."
 	> out.dr.txt
@@ -35,7 +35,7 @@ convergence_dr:
 	grep RESULT out.dr.txt | sed -E 's/.*dr=([^ ]+).*E0=([^ ]+).*/\1 \2/' > data_dr.txt
 	@echo "Saved cleaned data → data_dr.txt"
 
-# ================= CONVERGENCE IN rmax =================
+# CONVERGENCE IN rmax
 convergence_rmax:
 	@echo "Running convergence in rmax..."
 	> out.rmax.txt
@@ -46,7 +46,7 @@ convergence_rmax:
 	grep RESULT out.rmax.txt | sed -E 's/.*rmax=([^ ]+).*E0=([^ ]+).*/\1 \2/' > data_rmax.txt
 	@echo "Saved cleaned data → data_rmax.txt"
 
-# ================= TIMING =================
+# TIMING
 timing:
 	@echo "Measuring scaling (using ./main built-in test)..."
 	./main > out.times.txt
@@ -54,7 +54,7 @@ timing:
 	grep -E '^[[:space:]]*[0-9]+' out.times.txt > data_times.txt || true
 	@echo "Saved timing -> data_times.txt (numeric lines)"
 
-# ================= PLOTTING =================
+# PLOTTING 
 plot_dr:
 	gnuplot plot_dr.gp
 	@echo "Saved → fig_dr.png"

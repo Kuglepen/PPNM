@@ -40,7 +40,7 @@ std::tuple<vector, matrix> jacobi(matrix A) {
             for(int q = p+1; q < n; ++q) {
                 double apq = A(p, q), app = A(p, p), aqq = A(q, q);
 
-                // If apq is already tiny skip the rotation — small speedup & stability
+                // If apq is already tiny, skip
                 if (std::abs(apq) < 1e-16 * (std::abs(app) + std::abs(aqq) + 1.0)) continue;
 
                 double theta = 0.5 * std::atan2(2.0*apq, aqq - app);

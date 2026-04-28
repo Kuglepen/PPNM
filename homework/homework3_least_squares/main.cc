@@ -8,7 +8,7 @@
 int main(){
     using namespace pp;
 
-    // 1: polynomial
+    // polynomial
     vector x1 = {0,1,2,3};
     vector y1 = {1,2,5,10};
     vector dy1 = {1,1,1,1};
@@ -21,7 +21,7 @@ int main(){
 
     auto [c1, Sigma1] = lsfit(fs1,x1,y1,dy1);
 
-    // 2: radioactive decay
+    // radioactive decay
     vector t  = {1,2,3,4,6,9,10,13,15};
     vector y2 = {117,100,88,72,53,29.5,25.2,15.2,11.1};
     vector dy2 = {6,5,4,4,4,3,3,2,2};
@@ -88,7 +88,7 @@ int main(){
         // best fit
         double yfit = a * exp(-lambda * tt);
 
-        // 4 combinations
+        // combinations
         double a_pp = exp(c2[0] + dc0);
         double a_pm = exp(c2[0] + dc0);
         double a_mp = exp(c2[0] - dc0);

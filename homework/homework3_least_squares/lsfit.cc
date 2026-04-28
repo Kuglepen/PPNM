@@ -70,7 +70,7 @@ std::tuple<vector,matrix> lsfit(
         c[i] = (Qtb[i]-sum)/R(i,i);
     }
 
-    // ===== covariance =====
+    // covariance
     matrix Rinv = inverse_upper(R);
     matrix Sigma = Rinv * Rinv.T();
 
