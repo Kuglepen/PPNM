@@ -1,0 +1,10 @@
+Estimated area of unit circle: 0 ± 0 with sample size: 1
+Estimated area of unit circle: 2.4 ± 0.619677 with sample size: 10
+Estimated area of unit circle: 3.24 ± 0.15692 with sample size: 100
+Estimated area of unit circle: 3.18 ± 0.0510647 with sample size: 1000
+Estimated area of unit circle: 3.1368 ± 0.016455 with sample size: 10000
+Estimated area of unit circle: 3.13504 ± 0.00520738 with sample size: 100000
+Estimated area of unit circle: 3.14315 ± 0.0016411 with sample size: 1000000
+
+Estimated volume of the ellipsoid: 25.1375 ± 0.023973
+Actual volume of the ellipsoid: 25.1327
