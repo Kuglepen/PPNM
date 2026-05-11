@@ -1,0 +1,31 @@
+PART A: Newton
+Rosenbrock minimum (forward):          1          1 
+Rosenbrock steps (forward): 20
+Himmelblau minimum (forward):          3          2 
+Himmelblau steps (forward): 3
+Himmelblau minimum (forward):      -2.81       3.13 
+Himmelblau steps (forward): 3
+Himmelblau minimum (forward):      -3.78      -3.28 
+Himmelblau steps (forward): 3
+Himmelblau minimum (forward):       3.58      -1.85 
+Himmelblau steps (forward): 2
+
+PART B: Higgs fit
+Best fit parameters (forward):
+m     = 125.972
+Gamma = 2.08633
+A     = 9.87621
+Dmin  = 26.8695
+steps = 6
+
+PART C: Central differences
+Rosenbrock minimum (central):          1          1 
+Rosenbrock steps (central): 19
+Himmelblau minimum (central):          3          2 
+Himmelblau steps (central): 2
+Himmelblau minimum (central):      -2.81       3.13 
+Himmelblau steps (central): 3
+Himmelblau minimum (central):      -3.78      -3.28 
+Himmelblau steps (central): 3
+Himmelblau minimum (central):       3.58      -1.85 
+Himmelblau steps (central): 2
