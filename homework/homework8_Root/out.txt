@@ -1,0 +1,10 @@
+Hydrogen ground state
+rmin = 0.0001
+rmax = 8
+h    = 0.05
+acc  = 1e-06
+eps  = 1e-06
+
+Found E0 = -0.499975
+Exact E0 = -0.5
+Absolute error = 2.48996e-05
